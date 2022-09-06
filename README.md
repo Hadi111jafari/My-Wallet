@@ -40,7 +40,7 @@ To execute the tests, run the following command in your terminal:
 rspec
 ```
 
-## Authors
+## Author
 
 👤 **Abdul Hadi**
 
@@ -59,7 +59,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Thanks to my peers who are always there to offer support.
+- Based on [Gregoire Vella on Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) design.
 
 ## 📝 License
 
