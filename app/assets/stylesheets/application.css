@@ -247,3 +247,7 @@ body {
 .groups h2 {
   margin: 1rem;
 }
+
+.red_button {
+  background: red;
+}
