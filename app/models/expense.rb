@@ -1,8 +1,8 @@
 class Expense < ApplicationRecord
-    belongs_to :user
-    has_many :group_expense, dependent: :destroy
-    has_many :groups, through: :group_expense
+  belongs_to :user
+  has_many :group_expense, dependent: :destroy
+  has_many :groups, through: :group_expense
 
-    validates :name, presence: true
-    validates :amount, presence: true, numericality: { greater_than: 0 }
+  validates :name, presence: true
+  validates :amount, presence: true, numericality: { greater_than: 0 }
 end

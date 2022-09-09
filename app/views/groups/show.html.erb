@@ -17,15 +17,15 @@
       <h4>
     </div>  
       <p>
-        $ <%= @total_amount %>
+        $ <%= @group.total_amount %>
       </p>
     </div>
   </div>
   <button class="remove-category">
-    <%= link_to 'Remove', @group, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Remove', {:controller => :groups, :action => 'destroy', :id => @group.id}, :method => :delete, data: { confirm: 'Are you sure?' } %>
   </button>
   <h2>Expenses</h2> 
-      <% @expenses.order(created_at: :desc).each do |expense| %>
+      <% @group.expenses.order(created_at: :desc).each do |expense| %>
    <div class="expense">
       <span>
         <%= expense.name %>

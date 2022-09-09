@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe GroupExpense, type: :model do
-  subject { GroupExpense.new(group_id: 1, expense_id: 1)}
+  subject { GroupExpense.new(group_id: 1, expense_id: 1) }
 
   before { subject.save }
 

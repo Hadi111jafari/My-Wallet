@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-  subject { Group.new(name: 'Travel', icon: 'icon')}
+  subject { Group.new(name: 'Travel', icon: 'icon') }
 
   before { subject.save }
 
