@@ -1,0 +1,26 @@
+
+<section class="groups">
+  <div class="header-sign-out">
+    <%= link_to " < ", "/groups" %>
+   <h1>new Category</h1>
+   <p>
+    <%= link_to "sing out",  destroy_user_session_path, method: :delete %>
+   </p> 
+  </div>
+
+<%= form_with(model: @group) do |form| %>
+
+  <div class="field">
+    <%= form.text_field :name, value: @group.name, placeholder: "Name", required: true, class: "form_field" %>
+  </div>
+
+  <div class="select_icon">
+    <%= form.label :icon, 'Select Icon:', class: "select_icon_label" %>
+    <%= form.select :icon, ["✈️", "🎮", "📚", "🏥", "🏈", "🎬", "🏠", "🐶", "🍻", "🍔", "🚗", "🖥"], value: @group.icon, required: true, class: "select_icon_menu" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Save", class: "app_button green_button" %>
+  </div>
+<% end %>
+</section>
