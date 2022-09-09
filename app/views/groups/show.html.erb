@@ -21,9 +21,9 @@
       </p>
     </div>
   </div>
-  <button class="remove-category">
-    <%= link_to 'Remove', {:controller => :groups, :action => 'destroy', :id => @group.id}, :method => :delete, data: { confirm: 'Are you sure?' } %>
-  </button>
+  <div class="actions">
+    <%= button_to "Remove", @group, method: :delete, class: "app_button red_button" %>
+  </div>
   <h2>Expenses</h2> 
       <% @group.expenses.order(created_at: :desc).each do |expense| %>
    <div class="expense">
