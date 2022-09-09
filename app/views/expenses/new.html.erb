@@ -3,22 +3,10 @@
     <%= link_to " < ", "/groups" %>
   <h1>new expense</h1>
    <p>
-    <%= link_to "sing out",  destroy_user_session_path, method: :delete %>
+    <%= link_to "Sign Out",  destroy_user_session_path, method: :delete %>
    </p> 
   </div>
 <%= form_with(model: [@group, @expense]) do |form| %>
-  <% if @expense.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
-
-      <ul>
-        <% @expense.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="field">
     <%= form.text_field :name, value: @expense.name, placeholder: "Name", required: true, class: "form_field" %>
   </div>
@@ -31,10 +19,5 @@
     <%= form.submit "Save", class: "app_button green_button" %>
   </div>
 <% end %>
-<div class="actions_expense">
-  <% if @expense.id != nil && current_page?(edit_group_expense_path(@group, @expense)) %>
-    <%= button_to "Delete expense", group_expense_path(@group, @expense), method: :delete, class: "app_button red_button" %>
-  <% end %>
-</div>
 </section>
 
