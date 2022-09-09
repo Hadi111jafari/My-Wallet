@@ -13,141 +13,138 @@
  *= require_tree .
  *= require_self
  */
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
- body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
- .splash{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    position: absolute;
- }
-
- .splash h1 {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10%;
-    padding-bottom: 18%;
-    font-weight: bold;
-    font-size: xx-large;
-    color: #ffffff;
-
- }
-
- .splash-inner {
-    display: flex;
-    flex-direction: column;
- }
-
- .splash-btn {
-    margin: 1rem;
-    padding: 1rem;
-    background-color: #3778c2;
-    cursor: pointer;
-
- }
-
- .splash-btn a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: large;
-    color: #434b54;
-
- }
-
- .btn {
-   background: #5fb523;
-    text-decoration: none;
-    font-size: 1rem;
-    text-align: center;
-    border: none;
-    padding: 1.25rem 0;
-    cursor: pointer;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
- 
 
- .btn a {
-   text-decoration: none;
-   font-weight: 700;
-   font-size: large;
-   color: white;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- }
-
- .groups {
-   width: 100%;
-   height: 100vh;
-   background-color: gainsboro;
- }
- .groups h1 {
-   margin-left: auto;
-   margin-right: auto;
-   font-weight: 700;
-   font-size: xx-large;
-   color: white;
-   padding: 1.5rem;
-   justify-content: center;
-   align-items: center;
- }
-
-
- .group-list {
-   display: flex;
-   flex-direction: column;
-   margin: 0 1rem 1rem 1rem;
-   padding-top: 1rem;
- }
-
- .group-list span {
-   margin-right: 3rem;
- }
-
- .group {
-   display: flex;
-   flex-direction: row;
-   background-color: white;
-   border-radius: 2px;
-   padding: 1.5rem;
-   justify-content: space-between;
-
- }
- .name-icon {
+.splash {
   display: flex;
-   flex-direction: row;
-   background-color: white;
-   border-radius: 2px;
-   justify-content: space-between;
- }
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 
- .group_link {
-   text-decoration: none;
-   font-size: xx-large;
- }
+.splash h1 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10%;
+  padding-bottom: 18%;
+  font-weight: bold;
+  font-size: xx-large;
+  color: #fff;
+}
 
- .remove-category {
+.splash-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.splash-btn {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #3778c2;
+  cursor: pointer;
+}
+
+.splash-btn a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: large;
+  color: #434b54;
+}
+
+.btn {
+  background: #5fb523;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+
+.btn a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: large;
+  color: white;
+}
+
+.groups {
+  width: 100%;
+  height: 100vh;
+  background-color: gainsboro;
+}
+
+.groups h1 {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: xx-large;
+  color: white;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 1rem 1rem;
+  padding-top: 1rem;
+}
+
+.group-list span {
+  margin-right: 3rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 2px;
+  padding: 1.5rem;
+  justify-content: space-between;
+}
+
+.name-icon {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 2px;
+  justify-content: space-between;
+}
+
+.group_link {
+  text-decoration: none;
+  font-size: xx-large;
+}
+
+.remove-category {
   width: auto;
   padding: 0.5rem;
-  margin: 0rem 1rem 1rem 1rem;
+  margin: 0 1rem 1rem 1rem;
   background-color: red;
   border-radius: 2px;
- }
+}
 
 .remove-category a {
   text-decoration: none;
   color: white;
-
 }
 
 .header-sign-out {
@@ -156,17 +153,15 @@
   background-color: #3778c2;
   justify-content: center;
   align-items: center;
-
 }
 
 .header-sign-out a {
   font-weight: 700;
-   font-size: large;
-   color: white;
-   padding: 2rem;
-   text-decoration: none;
-   margin-top: 1rem;
-   
+  font-size: large;
+  color: white;
+  padding: 2rem;
+  text-decoration: none;
+  margin-top: 1rem;
 }
 
 .actions {
@@ -208,7 +203,7 @@
 }
 
 .green_button {
-  background: #5fb523;;
+  background: #5fb523;
 }
 
 .standard_button {
@@ -223,7 +218,6 @@
 .select_icon {
   display: flex;
   margin-bottom: 1rem;
-
 }
 
 .select_icon select {
