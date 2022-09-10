@@ -1,6 +1,6 @@
 class ExpensesController < ApplicationController
   def index
-    @expenses = Expense.where(user_id: current_user.id)
+    @expenses = Expense.where(user_id: current_user)
   end
 
   def new
@@ -8,7 +8,7 @@ class ExpensesController < ApplicationController
   end
 
   def show
-    @total_amount = Expense.where(user_id: current_user.id).sum(:amount)
+    @total_amount = Expense.where(user_id: current_user).sum(:amount)
   end
 
   def create
@@ -21,6 +21,7 @@ class ExpensesController < ApplicationController
   end
 
   def destroy
+    @expense = Expense.find(params[:id])
     @expense.destroy
     redirect_to expenses_path
   end
