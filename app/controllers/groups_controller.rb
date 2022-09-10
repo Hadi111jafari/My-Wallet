@@ -1,7 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    @groups = Group.where(user_id: current_user.id)
-    @total_amount = Expense.where(user_id: current_user.id).sum(:amount)
+    @groups = Group.where(user_id: current_user)
   end
 
   def new
@@ -11,7 +10,6 @@ class GroupsController < ApplicationController
   def show
     @expenses = Expense.where(user_id: current_user.id)
     @group = Group.find_by(id: params[:id])
-    @total_amount = Expense.where(user_id: current_user.id).sum(:amount)
   end
 
   def destroy
