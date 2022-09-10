@@ -59,7 +59,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   # The RSpec testing framework
   gem 'rspec-rails'
-
+  gem 'rails-controller-testing'
   gem 'database_cleaner'
 end
 
