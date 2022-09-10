@@ -1,0 +1,42 @@
+<section class="groups">
+  <div class="header-sign-out">
+    <%= link_to " < ", "/groups" %>
+   <h1>Category</h1>
+   <p>
+    <%= link_to "Sign Out",  destroy_user_session_path, method: :delete %>
+   </p> 
+  </div>
+  <div class="group-list"> 
+    <div class="group">
+     <div class="name-icon">
+      <span>
+        <%= @group.icon %>
+      </span> 
+      <h4>
+        <%= @group.name %>
+      <h4>
+    </div>  
+      <p>
+        $ <%= @group.total_amount %>
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <%= button_to "Remove", @group, method: :delete, class: "app_button red_button" %>
+  </div>
+  <h2>Expenses</h2> 
+      <% @group.expenses.order(created_at: :desc).each do |expense| %>
+   <div class="expense">
+      <span>
+        <%= expense.name %>
+      </span> 
+      <span>
+        $ <%= expense.amount %>
+      </span>
+    </div>     
+    <% end %>
+    
+</section>
+<button class="btn">
+    <%= link_to "add a new transaction", "/expenses/new" %>
+</button>
