@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @user = User.where(user_id: current_user.id)
+    @user = User.where(user_id: current_user)
   end
 
   def welcome; end

@@ -1,18 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +10,36 @@ body {
   box-sizing: border-box;
 }
 
+#login {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#login h2 {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  color: #fff;
+  background-color: #3778c2;
+  width: 100%;
+  text-align:center;
+}
+
+#sign_up {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#sign_up h2 {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  color: #fff;
+  background-color: #3778c2;
+  width: 100%;
+  text-align:center;
+}
+
 .splash {
   display: flex;
   flex-direction: column;
@@ -33,19 +48,22 @@ body {
   position: absolute;
 }
 
-.splash h1 {
+#app_title {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10%;
-  padding-bottom: 18%;
+  top: 25%;
+  position: relative;
   font-weight: bold;
   font-size: xx-large;
-  color: #fff;
+
 }
 
 .splash-inner {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  bottom: 1.5rem;
+  width: 100%;
 }
 
 .splash-btn {
@@ -89,11 +107,9 @@ body {
   background-color: gainsboro;
 }
 
-.groups h1 {
+.groups h3 {
   margin-left: auto;
   margin-right: auto;
-  font-weight: 700;
-  font-size: xx-large;
   color: white;
   padding: 1.5rem;
   justify-content: center;
@@ -130,7 +146,6 @@ body {
 
 .group_link {
   text-decoration: none;
-  font-size: xx-large;
 }
 
 .remove-category {
@@ -155,12 +170,10 @@ body {
 }
 
 .header-sign-out a {
-  font-weight: 700;
-  font-size: large;
   color: white;
-  padding: 2rem;
+  padding: 1rem;
   text-decoration: none;
-  margin-top: 1rem;
+  font-size: x-large;
 }
 
 .actions {
@@ -176,6 +189,9 @@ body {
   width: 100%;
   padding: 1rem;
   font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  outline: none;
 }
 
 .remember_box {
@@ -249,4 +265,45 @@ body {
 
 .red_button {
   background: red;
+}
+
+.other_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.other_links a {
+  color: #434654;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.other_links a:hover {
+  opacity: 1;
+}
+
+#expense_belongs_to_group {
+  margin: 1rem;
+  background-color: #fff;
+}
+
+#expense_belongs_to_group h4 {
+  padding: 1rem;
+  color: #434654;
+  font-size: larger;
+}
+
+#expense_belongs_to_group_inner {
+  display: flex;
+  flex-direction: column;
+}
+
+#expense_belongs_to_group_inner span {
+  padding: 1rem 0 1rem 1rem;
 }

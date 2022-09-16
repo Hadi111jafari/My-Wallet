@@ -1,8 +1,8 @@
 <section class="groups">
   <div class="header-sign-out">
-   <h1>Categories</h1>
+   <h3>Categories</h3>
    <p>
-    <%= link_to "Sign Out",  destroy_user_session_path, method: :delete %>
+    <%= link_to "🚪",  destroy_user_session_path, method: :delete %>
    </p> 
   </div>
   <div class="group-list">
@@ -17,9 +17,9 @@
         <%= group.name %>
       <h4>
     </div>  
-      <p>
-        $ <%= group.total_amount %>
-      </p>
+      <span>
+        $  <%= group.total_amount %>
+      </span>
     </div>
     <br>  
     <% end %>

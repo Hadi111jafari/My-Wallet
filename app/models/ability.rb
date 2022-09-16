@@ -7,7 +7,6 @@ class Ability
     return unless user.present?
 
     can :manage, Group, user: user
-    can :manage, Expense, user: user
-    can :manage, User, user: user
+    can :manage, Expense, user:
   end
 end

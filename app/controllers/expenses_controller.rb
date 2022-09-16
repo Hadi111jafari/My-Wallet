@@ -14,7 +14,7 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     if @expense.save
-      redirect_to expenses_path
+      redirect_to groups_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,6 +27,6 @@ class ExpensesController < ApplicationController
   end
 
   def expense_params
-    params.require(:expense).permit(:name, :amount).merge(user_id: current_user.id)
+    params.require(:expense).permit(:name, :amount, group_ids: []).merge(user_id: current_user.id)
   end
 end

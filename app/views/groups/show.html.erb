@@ -1,9 +1,9 @@
 <section class="groups">
   <div class="header-sign-out">
-    <%= link_to " < ", "/groups" %>
-   <h1>Category</h1>
+    <%= link_to " ⬅️ ", "/groups" %>
+   <h3>Category</h3>
    <p>
-    <%= link_to "Sign Out",  destroy_user_session_path, method: :delete %>
+    <%= link_to "🚪",  destroy_user_session_path, method: :delete %>
    </p> 
   </div>
   <div class="group-list"> 
@@ -24,7 +24,7 @@
   <div class="actions">
     <%= button_to "Remove", @group, method: :delete, class: "app_button red_button" %>
   </div>
-  <h2>Expenses</h2> 
+
       <% @group.expenses.order(created_at: :desc).each do |expense| %>
    <div class="expense">
       <span>
@@ -38,5 +38,5 @@
     
 </section>
 <button class="btn">
-    <%= link_to "add a new transaction", "/expenses/new" %>
+    <%= link_to "New Expense", "/expenses/new" %>
 </button>
