@@ -16,9 +16,11 @@ body {
   justify-content: center;
 }
 
-#link_to_root_page a {
-  background-color: #3778c2;
-  padding: 1.9rem 0rem 0rem 1rem;
+.splash-btn a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: large;
+  color: #434b54;
 }
 
 #login {
@@ -85,13 +87,6 @@ body {
   padding: 1rem;
   background-color: #3778c2;
   cursor: pointer;
-}
-
-.splash-btn a {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: large;
-  color: #434b54;
 }
 
 .btn {
@@ -316,4 +311,9 @@ body {
 
 #expense_belongs_to_group_inner span {
   padding: 1rem 0 1rem 1rem;
+}
+
+#link_to_root_page a {
+  background-color: #3778c2;
+  padding: 1.5rem;
 }
