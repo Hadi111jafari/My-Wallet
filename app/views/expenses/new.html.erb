@@ -1,0 +1,37 @@
+<section class="groups">
+<div class="header-sign-out">
+    <%= link_to " ⬅️ ", "/groups" %>
+  <h3>new expense</h3>
+   <p>
+    <%= link_to "🚪",  destroy_user_session_path, method: :delete %>
+   </p> 
+  </div>
+<%= form_with(model: @expense) do |form| %>
+  <div class="field">
+    <%= form.text_field :name, value: @expense.name, placeholder: "Name", required: true, class: "form_field" %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :amount, value: @expense.amount, placeholder: "Amount", type: "float", required: true, class: "form_field" %>
+  </div>
+
+  <div id="expense_belongs_to_group">
+    <h4>
+      <%= form.label :groups %>
+    </h4>
+    <div id="expense_belongs_to_group_inner">
+      <% for group in Group.all %>
+      <span>
+        <%= check_box_tag "expense[group_ids][]", group.id, @expense.groups.include?(group) %>
+        <%=h group.name %>
+      </span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="actions_expense">
+    <%= form.submit "Save", class: "app_button green_button" %>
+  </div>
+<% end %>
+</section>
+

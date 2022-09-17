@@ -1,0 +1,31 @@
+<section id="login">
+<div id="link_to_root_page">
+  <%= link_to " ⬅️ ", root_path %>
+  <h2>Log in</h2>
+</div>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form") do |f| %>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" , placeholder: "Email", class: "form_field", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form_field", required: true %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field remember_box">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in", class: "app_button green_button" %>
+  </div>
+<% end %>
+
+<div class="other_links">
+  <%= render "devise/shared/links" %>
+</div>
+</section>
