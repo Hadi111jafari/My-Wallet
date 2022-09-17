@@ -10,6 +10,17 @@ body {
   box-sizing: border-box;
 }
 
+#link_to_root_page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#link_to_root_page a {
+  background-color: #3778c2;
+  padding: 1.9rem 0rem 0rem 1rem;
+}
+
 #login {
   margin: 0;
   box-sizing: border-box;

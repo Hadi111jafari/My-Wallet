@@ -1,5 +1,8 @@
 <section id="sign_up">
-<h2>Sign up</h2>
+<div id="link_to_root_page">
+  <%= link_to " ⬅️ ", root_path %>
+  <h2>Sign up</h2>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>

@@ -1,5 +1,8 @@
 <section id="login">
-<h2>Log in</h2>
+<div id="link_to_root_page">
+  <%= link_to " ⬅️ ", root_path %>
+  <h2>Log in</h2>
+</div>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form") do |f| %>
   <div class="field">
