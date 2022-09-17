@@ -1,7 +1,20 @@
 # My-Wallet
 
-> This app is about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+> This app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
+## Built With:
+
+ - Ruby
+ - Ruby on rails
+ - postgresql
+ - CSS
+
+## Vedio Presentation
+
+[click here](https://www.loom.com/share/9212b70a80dc49d1bcd4b15a999f9108)
+## Live Link
+
+- Live Demo: [click here](https://mysterious-wave-73898.herokuapp.com/)
 ## Getting Started
 
 To get a local copy of the project, follow these steps: 
