@@ -316,4 +316,5 @@ body {
 #link_to_root_page a {
   background-color: #3778c2;
   padding: 1.5rem;
+  text-decoration: none;
 }
