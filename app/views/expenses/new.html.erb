@@ -20,7 +20,7 @@
       <%= form.label :groups %>
     </h4>
     <div id="expense_belongs_to_group_inner">
-      <% for group in Group.all %>
+      <% for group in Group.where(user_id: current_user.id) %>
       <span>
         <%= check_box_tag "expense[group_ids][]", group.id, @expense.groups.include?(group) %>
         <%=h group.name %>
